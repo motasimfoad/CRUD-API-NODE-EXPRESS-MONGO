@@ -6,6 +6,8 @@ const app = express();
 
 const port = 4200;
 
+require('./src/route')(app, {});
+
 app.listen(port, ()=>{
-    console.log("we are smoking at" + port);
+    console.log("we are smoking at " + port);
 });
