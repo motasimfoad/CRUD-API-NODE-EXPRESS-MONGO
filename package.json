@@ -1,0 +1,26 @@
+{
+  "name": "todo-api",
+  "version": "1.0.0",
+  "description": "basic CRUD api for TODO app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motasimfoad/Todo-API.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongo",
+    "todo",
+    "api"
+  ],
+  "author": "Motasim Foad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/motasimfoad/Todo-API/issues"
+  },
+  "homepage": "https://github.com/motasimfoad/Todo-API#readme"
+}
