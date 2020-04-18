@@ -9,8 +9,6 @@ const port = 4200;
 
 app.use(bodyParser.urlencoded({extended : true}));
 
-require('./src/route')(app, {});
-
 MongoClient.connect(db.url, (err, database) =>{
     if(err)
     return console.log(err);
