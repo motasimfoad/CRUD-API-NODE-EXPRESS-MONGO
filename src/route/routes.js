@@ -3,10 +3,10 @@ module.exports = function(app, db) {
     
     app.post('/notes', (req, res) => {    
     const note = { 
-        text: req.body.title, 
-        title: req.body.text 
+        title: req.body.title,
+        desc: req.body.desc, 
     };
-    
+        
     db.collection('notes').insert(note, (err, result) => {      
         if (err) {         
             res.send({ 
