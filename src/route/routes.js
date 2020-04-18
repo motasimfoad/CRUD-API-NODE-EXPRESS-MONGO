@@ -1,14 +1,40 @@
-module.exports = function(app, db){
-app.post('/notes', (req, res)=>{
-   note = {text: req.body.desc, title: req.body.title}
-    db.collection('Notes').insert(note, (err, result) =>{
-        if (err)
-        console.log(err);
-        console.log(result);
-        
-        
-    })
+var ObjectID = require('mongodb').ObjectID;
+module.exports = function(app, db) {  
     
-    res.send('Hello')
+    app.post('/notes', (req, res) => {    
+    const note = { 
+        text: req.body.title, 
+        title: req.body.text 
+    };
+    
+    db.collection('notes').insert(note, (err, result) => {      
+        if (err) {         
+            res.send({ 
+                'error': 'An error has occurred' 
+            }); 
+              } 
+                else 
+            {        
+                res.send(result);     
+        }    
+    });  
+  });
+  
+  app.get('/notes/:id', (req, res) => {
+    const id = req.params.id;
+    const details = { '_id': new ObjectID(id) }; 
+    console.log(details);
+       
+    db.collection('notes').findOne(details, (err, item) => {      
+        if (err) {        
+            res.send({'error':'An error has occurred'});      
+          } else { 
+                     res.send(item);     
+                   }   
+            }); 
 });
 };
+
+
+
+      
