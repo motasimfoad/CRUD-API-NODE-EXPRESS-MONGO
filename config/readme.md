@@ -6,7 +6,7 @@ If you have any queries feel free to ping me via https://motasimfoad.com/contact
 
 Its a simple note keeping api containing 2 felds, Title and Description. Which take post request and intermingle with MongoDB on Localhost. 
 
-###Properties & Endpoints: 
+###Properties & Endpoints : 
 
 CREATE endpoint >> localhost:4200/notes/
          >> POST body {
