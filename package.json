@@ -4,7 +4,7 @@
   "description": "basic CRUD api for TODO app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "server.js"
   },
   "repository": {
     "type": "git",
